@@ -10,16 +10,11 @@ console.log("Hello world!");
 
 const colors = ['red', 'green', 'blue'];
 
-function checkColor() {
-    const a = prompt('Enter a color: ');
-    if (a == 'red') {
-        alert(colors.indexOf("red"));
-    } else if (a == 'green') {
-        alert(colors.indexOf("green"));
-    } else if (a == 'blue') {
-        alert(colors.indexOf("blue"));
-    } else {
-        alert(-1);
-    }
+let checkColor = (color) => {
+    return colors.indexOf(color, 0);
 }
-checkColor(colors);
+
+console.log(checkColor('red'));
+console.log(checkColor('green'));
+console.log(checkColor('blue'));
+console.log(checkColor('black')); 
