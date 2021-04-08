@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VueJs 08.04.2021</title>
+  </head>
+  <body>
+    <!-- 1. Conectare VueJs -->
+    <!-- <div id="app">{{ message }} {{ test }}</div> -->
+
+    <!-- 2. V-Model -->
+    <!-- <div id="app">
+      <input type="text" v-model="message">
+      {{ message }}
+    </div> -->
+
+    <!-- 3. V-for -->
+    <!-- <div id="app" style="border: 1px solid gray">
+      Students: 
+      <ul>
+          <li v-for="student of students">{{student}}</li>
+      </ul>
+    </div> -->
+
+    <!-- 4. V-if -->
+    <!-- <div id="app" style="border: 1px solid gray">
+
+      <select v-model="gender">
+          <option value="M">Male</option>
+          <option value="F">Female</option>
+      </select>
+
+      <img v-if="gender === 'F'" src="https://c0.klipartz.com/pngpicture/874/55/gratis-png-iconos-de-computadora-avatar-perfil-de-usuario-femenino-avatar.png" alt="">
+      <img v-if="gender === 'M'" src="https://icon-library.com/images/male-icon-png/male-icon-png-17.jpg" alt="">
+    </div> -->
+
+    <!-- 5. Computed -->
+    <div id="app" style="border: 1px solid gray">
+      <input type="number" v-model="a">
+      <select v-model="operand">
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="*">*</option>
+        <option value="/">/</option>
+    </select> 
+      <input type="number" v-model="b">
+      =
+      <span v-if="operand==='+'">{{ suma }}</span>
+      <span v-if="operand==='-'">{{ diference }}</span>
+      <span v-if="operand==='*'">{{ multiplication }}</span>
+      <span v-if="operand==='/'">{{ divide }}</span>
+      
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script src="JS/index.js"></script>
+  </body>
+</html>
