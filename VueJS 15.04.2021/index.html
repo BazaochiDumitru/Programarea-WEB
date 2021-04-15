@@ -8,70 +8,27 @@
   </head>
   <body>
     <!-- Задача № 1 - Подключение VueJS через CND -->
-    <div id="app">
-      {{ username }}
-    </div>
+    <div id="app">{{ username }}</div>
 
     <!-- Задача № 2 - вычисляемые свойства и работа с моделью -->
     <div id="app2">
-      <input type="date" v-model="year">
+      <input type="date" v-model="year" />
       {{ age }}
     </div>
 
     <!-- Задача № 3 - отслеживание изменений переменной -->
     <div id="app3">
       <h3>On which language you program?</h3>
-      <input type="radio" name="language" v-model="Javascript">
-      <label for="one">Javascript</label><br>
-      <input type="radio" name="language" v-model="Python" >
-      <label for="one">Python</label><br>
-      <input type="radio" name="language" v-model="Java">
-      <label for="one">Java</label><br>
+      <p><input type="radio" name="language" v-model="language" value="JS" />JavaScript</p>
+      <p><input type="radio" name="language" v-model="language" value="Python" /> Python</p>
+      <p><input type="radio" name="language" v-model="language" value="Java" /> Java</p>
       <label>Experience?</label>
-      <input type="text" v-model="Experience">
-      <label>age</label><br>
-      <label>Your salary: </label>
-      {{ salary }}
+      <input type="text" v-model="experience" />
+      <label>age</label>
+      <br />
+      <label>Your salary</label>
+      ${{ salary }}
     </div>
-
-    <!-- 3. V-for -->
-    <!-- <div id="app" style="border: 1px solid gray">
-      Students: 
-      <ul>
-          <li v-for="student of students">{{student}}</li>
-      </ul>
-    </div> -->
-
-    <!-- 4. V-if -->
-    <!-- <div id="app" style="border: 1px solid gray">
-
-      <select v-model="gender">
-          <option value="M">Male</option>
-          <option value="F">Female</option>
-      </select>
-
-      <img v-if="gender === 'F'" src="https://c0.klipartz.com/pngpicture/874/55/gratis-png-iconos-de-computadora-avatar-perfil-de-usuario-femenino-avatar.png" alt="">
-      <img v-if="gender === 'M'" src="https://icon-library.com/images/male-icon-png/male-icon-png-17.jpg" alt="">
-    </div> -->
-
-    <!-- 5. Computed -->
-    <!-- <div id="app" style="border: 1px solid gray">
-      <input type="number" v-model="a">
-      <select v-model="operand">
-        <option value="+">+</option>
-        <option value="-">-</option>
-        <option value="*">*</option>
-        <option value="/">/</option>
-    </select> 
-      <input type="number" v-model="b">
-      =
-      <span v-if="operand==='+'">{{ suma }}</span>
-      <span v-if="operand==='-'">{{ diference }}</span>
-      <span v-if="operand==='*'">{{ multiplication }}</span>
-      <span v-if="operand==='/'">{{ divide }}</span>
-      
-    </div> -->
-
 
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
     <script src="JS/index.js"></script>
